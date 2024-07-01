@@ -9,14 +9,6 @@ public class Investigador {
     private String inveCodigo;
     private LinkedList<Publicaciones> publicaciones;
 
-    public Investigador(int inveId, String inveNombre, String inveArea, String inveCodigo, LinkedList<Publicaciones> publicaciones) {
-        this.inveId = inveId;
-        this.inveNombre = inveNombre;
-        this.inveArea = inveArea;
-        this.inveCodigo = inveCodigo;
-        this.publicaciones = publicaciones;
-    }
-
     // Getters y setters
     public int getInveId() {
         return inveId;

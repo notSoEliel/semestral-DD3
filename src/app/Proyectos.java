@@ -9,16 +9,6 @@ public class Proyectos {
     private String proyFechaFin;
     private String proyDescripcion;
 
-    public Proyectos(int proyId, String proyCodigo, String proyNombre, String proyHorasDedicacion, String proyFechaInicio, String proyFechaFin, String proyDescripcion) {
-        this.proyId = proyId;
-        this.proyCodigo = proyCodigo;
-        this.proyNombre = proyNombre;
-        this.proyHorasDedicacion = proyHorasDedicacion;
-        this.proyFechaInicio = proyFechaInicio;
-        this.proyFechaFin = proyFechaFin;
-        this.proyDescripcion = proyDescripcion;
-    }
-
     // Getters y setters
     public int getProyId() {
         return proyId;

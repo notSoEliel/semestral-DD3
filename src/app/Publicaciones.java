@@ -5,12 +5,6 @@ public class Publicaciones {
     private String publiTitulo;
     private String publiFechaPublicacion;
 
-    public Publicaciones(String publiFechaPublicacion, String publiTitulo, int publiId) {
-        this.publiFechaPublicacion = publiFechaPublicacion;
-        this.publiTitulo = publiTitulo;
-        this.publiId = publiId;
-    }
-
     public int getPubliId() {
         return publiId;
     }
