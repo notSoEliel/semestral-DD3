@@ -4,7 +4,6 @@ import config.Conexion;
 
 import java.sql.*;
 import java.util.LinkedList;
-import java.util.concurrent.Callable;
 
 public class OperacionesInvestigador {
     Statement st;

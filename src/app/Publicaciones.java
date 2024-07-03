@@ -34,5 +34,14 @@ public class Publicaciones {
         this.publiFechaPublicacion = publiFechaPublicacion;
     }
 
+    public LinkedList<Investigador> getAutores() {
+        return autores;
+    }
+
+    public void setAutores(LinkedList<Investigador> autores) {
+        this.autores = autores;
+    }
+
+    
 
 }

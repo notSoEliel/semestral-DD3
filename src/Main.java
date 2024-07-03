@@ -13,7 +13,6 @@ public class Main {
         OperacionesPublicaciones operacionesPublicaciones = new OperacionesPublicaciones();
 
         OperacionesInvestigador operacionesInvestigador = new OperacionesInvestigador();
-        InvestigadorHoras investigadorHoras = new InvestigadorHoras();
         Conexion con = new Conexion();
 
         Investigador investigador;
