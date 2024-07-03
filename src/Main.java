@@ -1,11 +1,5 @@
-import app.OperacionesPublicaciones;
-import app.OperacionesProyectos;
-import app.OperacionesInvestigador;
-import app.Publicaciones;
+import app.*;
 import config.Conexion;
-import app.Proyectos;
-import app.Investigador;
-import app.InvestigadorHoras;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

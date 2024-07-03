@@ -2,7 +2,7 @@ package config;
 import java.sql.*;
 public class Conexion {
     private String  usuario= "root";
-    private String password = "monchillo24";
+    private String password = "vivapythonnophp";
 
     private Connection cnn;
 
