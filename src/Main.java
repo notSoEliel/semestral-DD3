@@ -120,7 +120,7 @@ public class Main {
                                 System.out.println("\nID" + "\t\t" + "Código" + "\t\t" + "Nombre" + "\t\t" + "Horas dedicadas" + "\t\t" + "Fecha de Inicio" + "\t\t" + "Fecha de Fin" + "\t\t" + "Descripción");
 
                                 for (Proyectos proyecto : proyectosCulminados) {
-                                    System.out.println("\n" + proyecto.getProyId() + "\t\t" + proyecto.getProyCodigo() + "\t" + proyecto.getProyNombre() + "\t" + proyecto.getProyHorasDedicacion() + "\t" + proyecto
+                                    System.out.println(proyecto.getProyId() + "\t\t" + proyecto.getProyCodigo() + "\t" + proyecto.getProyNombre() + "\t" + proyecto.getProyHorasDedicacion() + "\t" + proyecto
                                             .getProyFechaInicio() + "\t" + proyecto.getProyFechaFin() + "\t" + proyecto.getProyDescripcion());
 
                                 }
@@ -154,7 +154,7 @@ public class Main {
                             System.out.println("Ingrese la fecha de publicación (YYYY-MM-DD):");
                             String publiFecha = reader.readLine();
                             Publicaciones publicacion = new Publicaciones();
-//                            publicacion.setPubliId(publiId);
+                            publicacion.setPubliId(publiId);
                             publicacion.setPubliTitulo(publiTitulo);
                             publicacion.setPubliFechaPublicacion(publiFecha);
                             operacionesPublicaciones.agregarPublicacion(con, publicacion);
@@ -168,7 +168,7 @@ public class Main {
                     case 6:
                         try {
                             while (true) {
-                                System.out.println("Seleccione una opción:");
+                                System.out.println("\nSeleccione una opción:");
                                 System.out.println("1. Modificar nombre del investigador");
                                 System.out.println("2. Modificar área del investigador");
                                 System.out.println("3. Salir");
@@ -177,23 +177,27 @@ public class Main {
                                 switch (opcion) {
                                     case 1:
                                         // Código para modificar el nombre del investigador
-                                        System.out.println("Ingrese el ID del investigador:");
+                                        System.out.println("\nIngrese el ID del investigador:");
                                         int inveId = Integer.parseInt(reader.readLine());
                                         investigador = operacionesInvestigador.obtenerInvestigador(con, inveId);
-                                        System.out.println("Va a modificar al siguiente investigador:");
+                                        System.out.println("\nVa a modificar al siguiente investigador:");
                                         System.out.print("\nNombre" + "\t\t" + "Área de investigación" + "\t\t" + "Código");
                                         System.out.println("\n" + investigador.getInveNombre() + "\t" + investigador.getInveArea() + "\t" + investigador.getInveCodigo());
 
-                                        System.out.println("Ingrese el nuevo nombre del investigador:");
+                                        System.out.println("\nIngrese el nuevo nombre del investigador:");
                                         String nuevoNombre = reader.readLine();
                                         operacionesInvestigador.actualizarNombreInvestigador(con, inveId, nuevoNombre);
                                         System.out.println("Nombre del investigador actualizado exitosamente.");
                                         break;
                                     case 2:
                                         // Código para modificar el área del investigador
-                                        System.out.println("Ingrese el ID del investigador:");
+                                        System.out.println("\nIngrese el ID del investigador:");
                                         inveId = Integer.parseInt(reader.readLine());
-                                        System.out.println("Ingrese el nuevo área del investigador:");
+                                        investigador = operacionesInvestigador.obtenerInvestigador(con, inveId);
+                                        System.out.println("\nVa a modificar al siguiente investigador:");
+                                        System.out.print("\nNombre" + "\t\t" + "Área de investigación" + "\t\t" + "Código");
+                                        System.out.println("\n" + investigador.getInveNombre() + "\t" + investigador.getInveArea() + "\t" + investigador.getInveCodigo());
+                                        System.out.println("\nIngrese el nuevo área del investigador:");
                                         String nuevaArea = reader.readLine();
                                         operacionesInvestigador.actualizarAreaInvestigacion(con, inveId, nuevaArea);
                                         System.out.println("Área del investigador actualizada exitosamente.");
@@ -201,12 +205,11 @@ public class Main {
                                     case 3:
                                         break;
                                     default:
-                                        System.out.println("Opción no válida. Intente de nuevo.");
-                                        break;
+                                        System.out.println("\nOpción no válida. Intente de nuevo.");
+                                        continue;
                                 }
-                                if (opcion == 3) {
-                                    break; // Salir del bucle while
-                                }
+                                break; // Salir del bucle while
+                                
                             }
                         } catch (NumberFormatException e) {
                             System.err.println("Error: ID de investigador inválido. " + e.getMessage());
